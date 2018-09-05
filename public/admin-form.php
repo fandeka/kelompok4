@@ -113,7 +113,7 @@
 					$message = $change_message;
 					//$from = $admin_email;
 					//$headers = 'From:' . $from;
-					mail($to,$subject,$message);
+					email($to,$subject,$message);
 					$error['update_user'] = " <h4><div class='alert alert-success'>
 														Success changed
 												 </div>
