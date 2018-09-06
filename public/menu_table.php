@@ -191,7 +191,7 @@
 			<td width="10%"><img src="<?php echo $data['Menu_image']; ?>" width="60" height="40"/></td>
 			<td><?php echo $data['Serve_for'];?></td>
 			<td><?php echo $data['Quantity'];?></td>
-			<td><?php echo $data['Price']." ".$currency;?></td>
+			<td><?php echo $currency." ".$data['Price'];?></td>
 			<td width="15%"><?php echo $data['Category_name'];?></td>
 			<td width="15%">
 				<a href="menu-detail.php?id=<?php echo $data['Menu_ID'];?>">

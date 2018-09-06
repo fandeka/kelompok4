@@ -55,6 +55,20 @@
 		//$result = $stmt->store_result();
 		$stmt->close();
 	}
+	// Dapatkan last ID sebagai ID Pesanan
+	$sql_query_id = "SELECT ID, Order_list
+			FROM tbl_reservation ORDER BY ID DESC LIMIT 1";
+	$stmt = $connect->stmt_init();
+	if($stmt->prepare($sql_query_id)) {	
+		// Execute query
+		$stmt->execute();
+		// store result 
+		$stmt->store_result();
+		$stmt->bind_result($ID,$Order_list);
+		$stmt->fetch();
+		$stmt->close();
+	}
+	// akhir dari ID pesanan
 	
 	// get admin email from user table
 	$sql_query = "SELECT Email 
@@ -92,9 +106,26 @@
 		$subject = null;
 		$message = null;
 
+		$order_list = strrchr($Order_list,'Total');
 		$to = $email_customer;
-		$subject = $checkout_subject;
-		$message = $checkout_message;
+		$subject = 'Checkout Berhasil';
+		$message = '<html><body>
+					<h1><strong>No. Pesanan Anda: TOHE'.$ID.'</strong></h1>
+						<h3>Silahkan Lakukan Pembayaran Sesuai Order Anda</h3>
+						<p>
+						'.$order_list.'
+						</p>
+						<h3>ke salah satu No. Rekening dibawah ini:</h3>
+						<ol>
+						<li>&nbsp;BANK BCA : No. Rek. 501-35672-56-1 a.n Funtastic Four Shop</li>
+						<li>&nbsp;BANK MANDIRI : No. Rek. 346-987-56-1 a.n Funtastic Four Shop</li>
+						<li>&nbsp;BANK BRI : No. Rek. 3267-98560-56-1 a.n Funtastic Four Shop</li>
+						<li>&nbsp;BANK BNI : No. Rek. 561-858-56-1 a.n Funtastic Four Shop</li>
+						</ol>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+					</body><html>';
+
 		email($to,$subject,$message);
 
 
