@@ -106,14 +106,14 @@
 		$subject = null;
 		$message = null;
 
-		$order_list = strrchr($Order_list,'Total');
+		//$order_list = strrchr($Order_list,'Total');
 		$to = $email_customer;
 		$subject = 'Checkout Berhasil';
 		$message = '<html><body>
 					<h1><strong>No. Pesanan Anda: TOHE'.$ID.'</strong></h1>
 						<h3>Silahkan Lakukan Pembayaran Sesuai Order Anda</h3>
 						<p>
-						'.$order_list.'
+						'.$Order_list.'
 						</p>
 						<h3>ke salah satu No. Rekening dibawah ini:</h3>
 						<ol>
