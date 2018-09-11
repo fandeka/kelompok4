@@ -110,7 +110,7 @@
 		$to = $email_customer;
 		$subject = 'Checkout Berhasil';
 		$message = '<html><body>
-					<h1><strong>No. Pesanan Anda: TOHE'.$ID.'</strong></h1>
+					<h1><strong>No. Pesanan Anda: f4shop'.$ID.'</strong></h1>
 						<h3>Silahkan Lakukan Pembayaran Sesuai Order Anda</h3>
 						<p>
 						'.$Order_list.'
