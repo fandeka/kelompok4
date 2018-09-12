@@ -80,7 +80,7 @@
 										$to = $Email;
 										$subject = 'Pesanan Diproses';
 										$message = '<html><body>
-														<h1><strong>No. Pesanan Anda: TOHE'.$ID.'</strong></h1>
+														<h1><strong>No. Pesanan Anda: f4shop'.$ID.'</strong></h1>
 														<h3>Terima kasih telah melakukan pemesanan di Toko Kami, berikut nomor resi pengiriman anda : </h3>
 														<h3>'.$resi_no.'</h3>
 														<p>&nbsp;</p>
