@@ -1,4 +1,5 @@
 <?php
+
 	include_once('includes/connect_database.php'); 
 	
 	// start session
