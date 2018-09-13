@@ -1,9 +1,9 @@
 <?php
 	//database configuration
-	$host ="45.64.99.131";
-	$user ="lumauonl_db";
-	$pass ="CChruhRZLV9E";
-	$database = "lumauonl_empat";
+	$host ="localhost";
+	$user ="user_db";
+	$pass ="pass_db";
+	$database = "database_db";
 	$connect = new mysqli($host, $user, $pass,$database) or die("Error : ".mysql_error());
 	
 	//access key to access API
